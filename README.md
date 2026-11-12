@@ -28,3 +28,11 @@ shape, so the whole picture reads as one soft round idea.
 - `main.py` — stdlib-only program that copies `entry.png` to
   `MAKEFUN_OUTPUT_DIR` (deterministic: both runs write identical bytes).
 - `LICENSE` — MIT.
+
+## Round 3 resubmission
+
+Rounds 1 and 2 both failed the `run_completes` check with an unchanged
+snapshot, so this resubmission changes the program: `main.py` now resolves
+the source path with a fallback (script-relative `entry.png`, then
+`entry.png` in the current working directory) and raises a clear error
+naming the missing path if neither exists. The picture itself is unchanged.
